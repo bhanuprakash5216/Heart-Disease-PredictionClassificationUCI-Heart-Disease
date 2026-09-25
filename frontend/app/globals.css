@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root { --ink: #071625; --navy: #091e32; --panel: rgba(16, 43, 66, .72); --line: rgba(168, 218, 255, .14); --cyan: #54e2dc; --blue: #6aa9ff; --muted: #91aabe; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ink); color: #f2f7fb; font-family: 'DM Sans', sans-serif; }
+h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; letter-spacing: 0; }
+button, input, select { font: inherit; }
+::selection { background: var(--cyan); color: var(--ink); }
+.glass { background: linear-gradient(135deg, rgba(25, 66, 92, .74), rgba(8, 25, 42, .74)); border: 1px solid var(--line); box-shadow: 0 18px 70px rgba(0,0,0,.18); backdrop-filter: blur(20px); }
+.grid-glow { background-image: linear-gradient(rgba(130,210,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(130,210,255,.04) 1px, transparent 1px); background-size: 48px 48px; }
+.orbit { animation: orbit 18s linear infinite; }
+@keyframes orbit { to { transform: rotate(360deg); } }
+.reveal { animation: reveal .7s ease both; }
+@keyframes reveal { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+input, select { width: 100%; border: 1px solid rgba(159, 210, 237, .18); border-radius: 10px; background: rgba(4, 19, 32, .72); padding: 11px 12px; color: #eef8ff; outline: none; }
+input:focus, select:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(84,226,220,.12); }
+label { display: block; color: #c5d8e5; font-size: 13px; font-weight: 600; }
+small { display: block; color: var(--muted); font-size: 11px; font-weight: 400; line-height: 1.4; margin-top: 5px; }
