@@ -51,6 +51,14 @@ The Kaggle notebook identifies the underlying source as the UCI Heart Disease da
 
 Swagger docs are available at http://localhost:8000/docs.
 
+## GitHub Pages deployment
+
+The Next.js frontend is configured for a static GitHub Pages export. Pushes to `main` run `.github/workflows/deploy-pages.yml` and publish the frontend at:
+
+https://bhanuprakash5216.github.io/Heart-Disease-PredictionClassificationUCI-Heart-Disease/
+
+GitHub Pages cannot run the FastAPI backend. For live predictions, deploy `backend/` separately on a Python host and set the GitHub Actions variable `NEXT_PUBLIC_API_URL` to that public API URL. Without it, the deployed UI remains an educational/static demo and local development continues to use `http://localhost:8000`.
+
 ## Safety
 
 Predictions are statistical outputs from a demonstration model. They can be wrong, are not a diagnosis, and should never replace a qualified healthcare professional.
